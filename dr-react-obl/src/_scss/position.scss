@@ -1,0 +1,68 @@
+.position-rel {
+    position: relative;
+}
+.position-abs {
+    position:absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+// 10px
+.top10px {
+    top: 10px;
+}
+.left10px {
+    left: 10px;
+}
+.right10px {
+    right: 10px;
+}
+.bottom10px {
+    bottom: 10px;
+}
+
+// 20px
+.top20px {
+    top: 20px;
+}
+.left20px {
+    left: 20px;
+}
+.right20px {
+    right: 20px;
+}
+.bottom20px {
+    bottom: 20px;
+}
+
+
+// 30px
+.top30px {
+    top: 30px;
+}
+.left30px {
+    left: 30px;
+}
+.right30px {
+    right: 30px;
+}
+.bottom30px {
+    bottom: 30px;
+}
+
+// unset
+.unset-top {
+    top: unset;
+}
+.unset-left {
+    left: unset;
+}
+.unset-right {
+    right: unset;
+}
+.unset-bottom {
+    bottom: unset;
+}

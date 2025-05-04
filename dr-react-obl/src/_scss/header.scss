@@ -1,0 +1,31 @@
+// header.scss
+.header {
+    background-color: map-get($light-theme, background-color);
+    color: map-get($light-theme, text-color);
+    padding: 0 20px;
+    // position: fixed;
+    text-align: center;
+    @include cool-box-shadow($light-theme);
+    // top: 0;
+    // left: 0;
+    // right: 0;
+    display: flex;
+    opacity: 1;
+    @include transition(all 0.3s ease-in-out);
+    justify-content: space-between;
+    align-items: center;
+    .header-left {
+      flex: 1; /* Allow the h2 to take up all available space on the left */
+    }
+  
+    .header-right {
+      display: flex;
+      gap: 10px; /* Add spacing between the links */
+    }
+  }
+  
+  .header.hidden {
+    opacity: 0;
+  }
+  
+  

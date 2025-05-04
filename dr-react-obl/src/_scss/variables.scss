@@ -1,0 +1,62 @@
+
+// variables.scss
+
+$light-theme: (
+  background-color: #ffffff,
+  text-light: #757575,
+  text-color: #454545,
+  text-dark: #202020,
+  background: #fff,
+  border: #a5a5a5,
+  shadow-color: rgba(0, 0, 0, 0.1),
+  hover-color: #f2f2f2,
+  link-color: #3498db,
+  hover-link-color: darken(#3498db, 10%),
+  odd-row-color: #f9f9f9,
+  hover-row-color: #e0e0e0,
+  purple: purple,
+  text-green: #176d17,
+  text-red: #f44,
+  text-yellow: #b5b509
+);
+
+$dark-theme: (
+  background-color: #2e2e2e,
+  text-light: #999,
+  text-color: #ffffff, // mixins can reduce this variables 4 sure 
+  text-dark: #ccc,
+  background: #333,
+  shadow-color: rgba(0, 0, 0, 0.3),
+  hover-color: #222,
+  link-color: #3498db,
+  hover-link-color: darken(#3498db, 10%),
+  odd-row-color: #444,
+  hover-row-color: #555,
+  purple: purple,
+  text-green: #176d17,
+  text-red: #f44,
+  text-yellow: #b5b509
+);
+
+@mixin transition($args...){ -webkit-transition:$args;-moz-transition:$args;-ms-transition:$args;-o-transition:$args;transition:$args; }
+
+@mixin cool-box-shadow($theme) {
+  box-shadow: 0 4px 6px #{map-get($theme, shadow-color)};
+  transition: box-shadow 0.3s ease-in-out;
+
+  &:hover {
+    box-shadow: 0 4px 6px darken(map-get($theme, shadow-color), 10%);
+  }
+}
+
+// Mixin for transform property with translateY
+@mixin transform-translateY($value) {
+  -webkit-transform: translateY($value);
+  -moz-transform: translateY($value);
+  transform: translateY($value);
+}
+
+.text-green { color: map-get($light-theme, text-green); }
+.text-red { color: map-get($light-theme, text-red); }
+.text-yellow { color: map-get($light-theme, text-yellow); }
+  

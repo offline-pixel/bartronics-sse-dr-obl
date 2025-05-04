@@ -1,0 +1,112 @@
+.filter-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; // Full viewport height
+    padding: 1.5rem;
+    box-sizing: border-box;
+  
+    .filter-title {
+      font-size: 1.3rem;
+      margin-bottom: 1.5rem;
+      // color: #333;
+      margin-top: 0;
+    }
+  
+    // Scrollable middle section
+    .filter-group {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 1.2rem;
+  
+      label {
+        font-weight: 600;
+        margin-bottom: 0.3rem;
+        // color: #555;
+      }
+  
+      input {
+        padding: 0.6rem 0.8rem;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 0.95rem;
+        background-color: transparent;
+        transition: border 0.2s ease;
+  
+        &:focus {
+          border-color: #007bff;
+          outline: none;
+        }
+      }
+    }
+  
+    // Add this wrapper to handle scrollable inputs
+    .filter-content {
+      flex: 1;
+      overflow-y: auto;
+    //   margin-bottom: 1.5rem;
+      padding-bottom: 5rem; // leave space for sticky buttons
+
+    }
+  
+    .filter-buttons {
+        position: sticky;
+        bottom: 0;
+        // background-color: white;
+        padding: 1rem 0 0.5rem;
+        display: flex;
+        gap: 0.75rem;
+        z-index: 10; // Stay above inputs
+      
+        .apply-btn,
+        .close-btn {
+          flex: 1;
+          padding: 0.7rem 1rem;
+          font-size: 1rem;
+          border-radius: 6px;
+          border: none;
+          cursor: pointer;
+          transition: background 0.2s ease;
+        }
+      
+        .apply-btn {
+          background-color: #007bff;
+          color: white;
+      
+          &:hover {
+            background-color: #0056b3;
+          }
+        }
+      
+        .close-btn {
+          background-color: #e0e0e0;
+          color: #333;
+      
+          &:hover {
+            background-color: #c8c8c8;
+          }
+        }
+      }
+      
+  }
+  
+
+  select {
+    padding: 0.6rem 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    background-color: #fff;
+    transition: border 0.2s ease;
+    appearance: none; // removes OS-specific styling
+    background-image: url("data:image/svg+xml,%3Csvg width='12' height='7' viewBox='0 0 12 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L6 6L11 1' stroke='%23666' stroke-width='1.5'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.8rem center;
+    background-size: 1rem;
+    cursor: pointer;
+  
+    &:focus {
+      border-color: #007bff;
+      outline: none;
+    }
+  }
+  

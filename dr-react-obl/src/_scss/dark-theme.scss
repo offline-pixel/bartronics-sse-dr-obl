@@ -1,0 +1,17 @@
+
+// dark.scss
+
+@media (prefers-color-scheme: dark) {
+  body, .header {
+    background-color: map-get($dark-theme, background-color) !important;
+    color: map-get($dark-theme, text-color) !important;
+  }
+  i { color:map-get($dark-theme, text-light) }
+  b {
+    color:map-get($dark-theme, text-dark);
+    i {
+      color:map-get($dark-theme, text-dark);
+    }
+  }
+
+}

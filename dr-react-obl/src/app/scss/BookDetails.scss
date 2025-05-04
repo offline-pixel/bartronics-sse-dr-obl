@@ -1,0 +1,187 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css');
+
+.book-details-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  // color: #333;
+}
+
+// Header Styles
+.book-details-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.back-button, .like-button {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  // color: #555;
+  transition: all 0.3s ease;
+
+  &:hover {
+    // color: #222;
+    transform: scale(1.1);
+  }
+}
+
+.like-button {
+  &.liked {
+    color: #ff4757;
+  }
+}
+
+// Book Info Section
+.book-info-section {
+  display: flex;
+  gap: 3rem;
+  margin-bottom: 3rem;
+  padding: 2rem 0;
+}
+
+.book-cover-container {
+  flex: 0 0 35%;
+  
+  .book-cover {
+    width: 100%;
+    height: auto;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    min-width: 100% !important;
+  }
+}
+
+.book-meta {
+  flex: 1;
+  
+  .book-title {
+    font-size: 1.2rem;
+    margin: 0 0 0.5rem 0;
+    // color: #222;
+  }
+  
+  .book-author {
+    font-size: 0.9rem;
+    margin: 0 0 1.5rem 0;
+    // color: #666;
+    font-weight: normal;
+  }
+}
+
+.book-tags {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  
+  span {
+    padding: 0.5rem 1rem;
+    background: #f5f5f5;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    // color: #555;
+  }
+}
+
+.author-biography {
+  h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    // color: #444;
+  }
+  
+  p, div {
+    line-height: 1.7;
+    // color: #555;
+  }
+}
+
+// Book Extract Section
+.book-extract-section {
+  padding: 2rem 0;
+  margin-bottom: 3rem;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+
+  h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    // color: #444;
+  }
+}
+
+.book-extract-content {
+  line-height: 1.8;
+  // color: #555;
+  
+  p {
+    margin-bottom: 1.5rem;
+  }
+}
+
+// Related Works Section
+.related-works-section {
+  padding: 2rem 0;
+  margin-bottom: 4rem;
+  overflow: hidden;
+  
+  h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    // color: #444;
+  }
+}
+
+.related-works-container {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  padding-bottom: 1rem;
+//   transform: translateX(100%);
+  transition: transform 0.3s ease-out;
+  scrollbar-width: none; /* Firefox */
+  
+  &::-webkit-scrollbar {
+    display: none; /* Chrome/Safari */
+  }
+}
+
+.related-work {
+  flex: 0 0 180px;
+  text-align: center;
+  
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 0.8rem;
+    transition: transform 0.3s ease;
+    
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+  
+  p {
+    font-size: 0.9rem;
+    // color: #666;
+    line-height: 1.5;
+    margin: 0;
+  }
+}
+
+// Loading and Error States
+.loading-spinner, .error-message {
+  text-align: center;
+  padding: 4rem;
+  font-size: 1.2rem;
+  // color: #666;
+}

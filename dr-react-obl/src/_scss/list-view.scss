@@ -1,0 +1,119 @@
+.table.list-view {
+  .list-view-hidden {
+    display: none;
+  }
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 20px;
+  // border: 1px solid map-get($light-theme, background-color);
+  @include cool-box-shadow($light-theme);
+  thead, th {
+    background-color: map-get($light-theme, hover-color);
+    @media (prefers-color-scheme: dark) {
+      background-color: map-get($dark-theme, background-color);
+    }
+  }
+
+  th {
+    padding: 8px 0px;
+    text-align: left;
+    font-weight: bold;
+    border-bottom: 1px solid map-get($light-theme, border);
+    @media (prefers-color-scheme: dark) {
+      border-bottom: 1px solid map-get($dark-theme, border);
+    }
+    div { 
+      padding: 10px 7px;
+      height: 36px;
+      border-right: 1px solid map-get($light-theme, border);
+      border-left: 2px solid map-get($light-theme, background);
+      @media (prefers-color-scheme: dark) {
+        border-right: 1px solid map-get($dark-theme, background);
+        border-left: 2px solid map-get($dark-theme, background);
+      }
+      font-weight: 500;
+    }
+    &:first-child div {
+      border-left: none;
+    }
+    &:last-child div {
+      border-right: none;
+    }
+    .sort-indicator {
+      font-size: 12px;
+      margin-left: 5px;
+      @include transition(all 0.3s ease-in-out);
+    }
+
+    &:hover {
+      cursor: pointer;
+      .sort-indicator {
+        // transform: translateY(-2px);
+        @include transform-translateY(-2px);
+      }
+    }
+  }
+
+  td {
+    padding: 8px;
+    position: static !important;
+    min-width: 110px;
+    &:first-child {
+      min-width: 80px;
+    }
+    .card-tag {
+      position: static !important;
+
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      // transition: transform 0.2s ease-in-out;
+      @include transition(transform 0.3s ease-in-out);
+
+    }
+
+  }
+
+  tbody tr:nth-child(odd) {
+    background-color: map-get($light-theme, odd-row-color);
+    @media (prefers-color-scheme: dark) {
+      background-color: map-get($dark-theme, odd-row-color);
+    }
+  }
+
+  tbody tr {
+    border-top: 1px solid map-get($light-theme, border);
+    @media (prefers-color-scheme: dark) {
+      border-top: 1px solid map-get($dark-theme, background);
+    }
+    position: static !important;
+  }
+
+  tbody tr:hover {
+    background-color: map-get($light-theme, hover-row-color);
+    @media (prefers-color-scheme: dark) {
+      background-color: map-get($dark-theme, hover-row-color);
+    }
+    // transition: background-color 0.3s ease-in-out;
+    @include transition(all 0.3s ease-in-out);
+    td {
+      img {
+        transform: scale(1.05);
+      }
+    }
+  }
+  @media (max-width: 980px) {  
+    th:first-child,
+    td:first-child {
+      display: none;
+    }
+    td {
+      min-width: 90px;
+    }
+    max-width: 100%;
+    overflow: scroll;
+    display: block;
+  }
+}
+

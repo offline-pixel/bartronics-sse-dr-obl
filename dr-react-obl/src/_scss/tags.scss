@@ -1,0 +1,62 @@
+a {
+    color: map-get($light-theme, link-color);
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    // transition: color 0.3s ease-in-out;
+    @include transition(color 0.3s ease-in-out);
+    &:hover {
+      color: map-get($light-theme, hover-link-color) !important;
+      cursor: pointer;
+    }
+    // &:visited {
+    //     color: map-get($light-theme, purple); //  it's persisting value on SSD drives..so irritating a bit
+    // }
+}
+
+i {
+    color:map-get($light-theme, text-light);
+    font-weight: 300;
+}
+
+b {
+    font-weight: 500;
+    color:map-get($light-theme, text-dark);
+    i {
+        // font-weight: 600;
+        color:map-get($light-theme, text-dark);
+    }
+}
+
+
+img {
+    width: 100%;
+    max-width: 120px !important;
+    min-width: 80px !important;
+    img:hover {
+        transform: scale(1.05);
+        // @include transform-translateY(-2px);
+    }
+}
+/* ::-moz-selection for Firefox */
+::-moz-selection {
+    background: rgba(35, 35, 35, 0.1); /* Adjust the color and opacity as needed */
+}
+
+/* Scrollbar for WebKit browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+}
+
+/* Scrollbar thumb */
+::-webkit-scrollbar-thumb {
+    background: rgba(35, 35, 35, 0.2); /* Adjust the color and opacity as needed */
+    border-radius: 10px;
+}
+
+/* Scrollbar track */
+::-webkit-scrollbar-track {
+    background: rgba(35, 35, 35, 0.1); /* Adjust the color and opacity as needed */
+    border-radius: 10px;
+}

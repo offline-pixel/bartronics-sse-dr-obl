@@ -1,0 +1,62 @@
+
+/* Media query for screens with a maximum width of 680px */
+@media (max-width: 680px) {  
+    /* Hide the first th and its corresponding td */
+    // table th:first-child,
+    // table td:first-child {
+    //   display: none;
+    // }
+    // .table {
+    //   & th {
+    //     max-height: 36px;
+    //     max-width: 80px;
+    //     text-overflow: ellipsis;
+    //     // display: -webkit-box;
+    //     -webkit-line-clamp: 2;
+    //     line-height: 18px;
+    //     -webkit-box-orient: vertical;
+    //     overflow: hidden;
+    //     width: 17.3%;
+    //     // min-width: 101px;
+    //   }
+    //   & td {
+    //     width: 17.3%;
+    //     & img {
+    //       max-width: 60px !important;
+    //     }
+    //   }
+    // }
+    // table, tr, thead, tbody {
+    //   display: block;
+    //   width: 100%;
+    // }
+  }
+  
+  @media (max-width: 400px) {  
+    // .table {
+    //   & th, & td {
+    //     width: 15%;
+    //     padding-left: 0px;
+    //     padding-right: 0px;
+    //     max-width: unset;
+    //     & div {
+    //       padding-left: 2px;
+    //       padding-right: 2px;
+    //     }
+    //   }
+    // }
+  }
+  
+  @media (max-width: 920px) {
+    // table th:first-child,
+    // table td:first-child {
+    //   max-width: 68px;
+    //   font-size: 11px;
+    // }
+    // p {
+    //   margin: 0;
+    // }
+    // img {
+    //   max-width: 80px !important;
+    // }
+} 
